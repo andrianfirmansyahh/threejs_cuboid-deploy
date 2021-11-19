@@ -3,7 +3,7 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
 
 //SCENE
 const canvas = document.querySelector('.webgl')
-const scene = new THREE.Scene()
+const scene = new THREE.Scene();
 
 //TEXTURE Loader
 const texture = new THREE.TextureLoader().load('/texture/pattern.jpg');
