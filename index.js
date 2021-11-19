@@ -9,7 +9,7 @@ const scene = new THREE.Scene()
 const texture = new THREE.TextureLoader().load('/texture/pattern.jpg');
 
 //OBJECT
-const geometry = new THREE.BoxGeometry(1,1,1);
+const geometry = new THREE.BoxGeometry(2,2,2);
 const material = new THREE.MeshBasicMaterial({map:texture});
 const mesh = new THREE.Mesh(geometry,material);
 scene.add(mesh)
