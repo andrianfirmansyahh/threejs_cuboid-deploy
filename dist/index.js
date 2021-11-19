@@ -6,7 +6,7 @@ const canvas = document.querySelector('.webgl')
 const scene = new THREE.Scene();
 
 //TEXTURE Loader
-const texture = new THREE.TextureLoader().load('./texture/pattern.jpg');
+const texture = new THREE.TextureLoader().load('/texture/pattern.jpg');
 
 //OBJECT
 const geometry = new THREE.BoxGeometry(2,2,2);
@@ -55,7 +55,7 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 camera.position.z = 5;
 scene.add(camera)
 
-const renderer = new THREE.WebGL1Renderer({
+const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     alpha: true
 })
