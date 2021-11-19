@@ -6,7 +6,7 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene();
 
 //TEXTURE Loader
-const texture = new THREE.TextureLoader().load('/dist/texture/pattern.jpg');
+const texture = new THREE.TextureLoader().load('/texture/pattern.png');
 
 //OBJECT
 const geometry = new THREE.BoxGeometry(2,2,2);
