@@ -6,14 +6,12 @@ const canvas = document.querySelector('.webgl')
 const scene = new THREE.Scene()
 
 //TEXTURE Loader
-const textureLoader = new THREE.TextureLoader();
-const normalTexture = textureLoader.load('/texture/pattern.jpg');
+const texture = new THREE.TextureLoader().load('/texture/pattern.jpg');
 
 //OBJECT
-const geometry = new THREE.BoxGeometry(1,1,1)
-const material = new THREE.MeshBasicMaterial()
-material.normalMap = normalTexture;
-const mesh = new THREE.Mesh(geometry,material)
+const geometry = new THREE.BoxGeometry(1,1,1);
+const material = new THREE.MeshBasicMaterial({map:texture});
+const mesh = new THREE.Mesh(geometry,material);
 scene.add(mesh)
 
 const geometry2 = new THREE.BoxGeometry(2,2,2)
