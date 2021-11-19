@@ -1,15 +1,17 @@
-import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
+import * as THREE from '/three.js-master/build/three.module.js'
+
 
 //SCENE
 const canvas = document.querySelector('.webgl')
 const scene = new THREE.Scene()
 
+//TEXTURE Loader
+const texture = new THREE.TextureLoader().load('/texture/pattern.jpg');
+
 //OBJECT
-const geometry = new THREE.BoxGeometry(1,1,1)
-const material = new THREE.MeshBasicMaterial({
-    color:0xff0000
-})
-const mesh = new THREE.Mesh(geometry,material)
+const geometry = new THREE.BoxGeometry(1,1,1);
+const material = new THREE.MeshBasicMaterial({map:texture});
+const mesh = new THREE.Mesh(geometry,material);
 scene.add(mesh)
 
 const geometry2 = new THREE.BoxGeometry(2,2,2)
